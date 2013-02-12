@@ -45,7 +45,7 @@
 	<section>
 		<h1>git &#177; intro</h1>
 		<p><br></p>
-		<div>Thu Jan 24 2013 :: Mike Imamura</div>
+		<div>Wed Feb 12 2013 :: Mike Imamura</div>
 	</section>
 	<section>
 		<div>
@@ -223,6 +223,80 @@ git <b>merge</b> fixes</pre>
 				</ol>
 			</div>
 		</section>
+	</section>
+	<section data-state="alert">
+		<h1>intermediate &#177; git</h1>
+		<div>Here be bobcats</div>
+	</section>
+	<section>
+		<section>
+			<h2>Rewriting History</h2>
+			<div><br></div>
+			<div class="fragment roll-in"><i>Optimist:</i><br>
+				If you haven't pushed it yet, you can still change it</div>
+			<div><br></div>
+			<div class="fragment roll-in"><i>Pessimist:</i><br>
+				If you change a pushed commit, bad things happen</div>
+			<aside class="notes">
+				History is written by the victors, and we're all winners here.
+			</aside>
+		</section>
+		<section>
+			<div>(don't change published history)</div>
+		</section>
+	</section>
+	<section>
+		<h2>Oops, I made a typo&hellip;</h2>
+		<div>Stage your fixes like usual...</div>
+		<div><br></div>
+		<div>Then amend the previous commit instead of creating a new one:</div>
+		<pre>git <b>commit --amend</b></pre>
+	</section>
+	<section>
+		<h2>
+	</section>
+	<section>
+		<h2>pull + rebase</h2>
+		<div>Pull in other people's commits, but <i>move</i> your unpushed
+			commits to the end.</div>
+		<pre>git <b>pull --rebase</b></pre>
+		<div><br></div>
+		<div>Some teams prefer this since it results in more linear history.</div>
+		<aside class="notes">
+			Which is easier to read if you're trying to get from point A to point B,
+			the turn-by-turn directions from Google Maps or the London tube diagram?
+		</aside>
+	</section>
+	<section>
+		<h2>Rebase Whole Branches</h2>
+		<div>Move all of the commits in your local branch to the end of the
+			branch it split off from:</div>
+		<pre>git checkout mybranch
+git <b>rebase</b> master</pre>
+	</section>
+	<section>
+		<h2>Rewind History</h2>
+		<div>Undo the previous commit:</div>
+		<pre>git <b>reset</b> HEAD^</pre>
+		<div>Undo the previous two commits:</div>
+		<pre>git <b>reset</b> HEAD^2</pre>
+		<aside class="notes">
+			<div>There's also the <code>--soft</code> and <code>--hard</code>
+				modes, but we won't get into those here, since it can get a bit
+				involved.  If you're really curious, and like diagrams, then try
+				<a href="http://git-scm.com/2011/07/11/reset.html">this</a>
+				detailed explanation.</div>
+		</aside>
+	</section>
+	<section>
+		<h2>Heavy-Duty History Rewriting</h2>
+		<div>Reorder, edit, reword, drop, split, combine history.</div>
+		<pre>git <b>rebase -i</b></pre>
+		<div>This is <i>interactive</i> &mdash; it will open an editor with
+			a list of your commits along with instructions.</div>
+		<aside class="notes">
+			Y'know, for winners.
+		</aside>
 	</section>
 </div>
 
