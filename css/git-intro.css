@@ -15,3 +15,14 @@
 	margin: 10px 0;
 }
 
+.reveal .linux-install th {
+	text-align: right;
+	border-right: 2px #7f7f7f solid;
+	padding-right: 0.5em;
+}
+
+.reveal .linux-install td {
+	font-family: monospace;
+	padding-left: 0.5em;
+}
+v
