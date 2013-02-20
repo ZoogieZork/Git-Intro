@@ -335,7 +335,10 @@ git <b>rebase</b> master</pre>
 		<pre>git <b>remote prune</b> origin</pre>
 		<div>Clean out abandoned commits, recompress files, and much more:</div>
 		<pre>git <b>gc</b></pre>
-
+		<aside class="notes">
+			There's also the <code>--aggressive</code> option to <b>gc</b> for
+			those who are truly desperate to reclaim as much space as possible.
+		</aside>
 	</section>
 	<section data-state="soothe">
 		<h1>Question Time</h1>
@@ -348,6 +351,35 @@ git <b>rebase</b> master</pre>
 		<section>
 			<div><img src="res/qr-url.png" alt=""></div>
 			<div><a href="http://github.com/ZoogieZork/Git-Intro">http://github.com/ZoogieZork/Git-Intro</a></div>
+		</section>
+	</section>
+	<section data-state="blackout">
+		<h1>Advanced &#177; Topics</h1>
+		<p><i>Also known as "further reading".</i></p>
+		<aside class="notes">
+			<p>If you've found this section, then congratulations!  You're in for a
+				magical world of refspecs, indexes, and... er...</p>
+			<p>Actually, no, this is more of just an overview of advanced topics
+				for another time that I threw in at the last minute.</p>
+		</aside>
+	</section>
+	<section>
+		<section>
+			<h2>Bringing Repositories Together</h2>
+			<h3>Submodules</h3>
+			<pre>git <b>submodule add</b> <i>repo</i> <i>dir</i></pre>
+			<div><i>Embeds</i> a separate repository as <i>dir</i>.</pre>
+			<div><br></div>
+			<div>The repository is kept separate.</div>
+		</section>
+		<section>
+			<h2>Bringing Repositories Together</h2>
+			<h3>Subtree</h3>
+			<pre>git <b>subtree add</b> --prefix <i>dir</i> <i>repo</i> <i>branch</i></pre>
+			<div><i>Merges</i> a separate repository as <i>dir</i>.</div>
+			<div><br></div>
+			<div>The full history of the repository is pulled in, as if it had
+				always been a part of your project, living at that directory.</div>
 		</section>
 	</section>
 </div>
