@@ -20,9 +20,9 @@
                 .on("swipe-right", function(e){ Reveal.left(); })
                 .on("swipe-up", function(e){ Reveal.down(); })
                 .on("swipe-down", function(e){ Reveal.up(); })
-                .on("tap", function(e){ 
-                    Reveal.toggleOverview(); 
-                });
+                .on("zoom-in", function(e){ Reveal.toggleOverview(); })
+                .on("zoom-out", function(e){ Reveal.toggleOverview(); })
+                .on("tap", function(e){ Reveal.next(); });
         } );
 
         head.js('https://raw.github.com/Remotes/Remotes/master/dist/remotes.ne.min.js');
