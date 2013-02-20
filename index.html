@@ -382,6 +382,29 @@ git <b>rebase</b> master</pre>
 				always been a part of your project, living at that directory.</div>
 		</section>
 	</section>
+	<section>
+		<section>
+			<h2>Find That One Bad Commit</h2>
+			<div>Given a good commit and a later bad commit, interactively find the
+				commit that caused all the trouble:</div>
+			<pre>git <b>bisect start</b>
+git <b>bisect good</b> <i>good-commit</i>
+git <b>bisect bad</b> <i>bad-commit</i></pre>
+		</section>
+		<section>
+			<h3>Bisect Through History</h3>
+			<div>Run your tests and either mark the current revision as good:</div>
+			<pre>git <b>bisect good</b></pre>
+			<div>&hellip; or bad:</div>
+			<pre>git <b>bisect bad</b></pre>
+			<div>&hellip; until there are no more revisions to check and Git
+				tells you which commit was the culprit.</div>
+		</section>
+		<section>
+			<h3>End the Bisect Session</h3>
+			<pre>git <b>bisect reset</b></pre>
+		</section>
+	</section>
 </div>
 
 		</div>
