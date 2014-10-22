@@ -226,16 +226,13 @@ git <b>merge</b> fixes</pre>
 			<h2>Sharing Branches</h2>
 			<div>Publish your branch:</div>
 			<pre>git <b>push -u origin</b> fixes</pre>
-			<div>
-				<small>On older versions of Git (pre-1.7), install "git-publish":<br>
-					<a href="http://code.google.com/p/git-publish/">http://code.google.com/p/git-publish/</a></small>
-			</div>
 			<div><br></div>
 			<div>Delete a published branch:</div>
-			<pre>git <b>push origin :</b>fixes</pre>
-			<p>
-				<i>(note the colon before the branch name!)</i>
-			</p>
+			<pre>git <b>push origin --delete </b>fixes</pre>
+			<aside class="notes">
+				Or "git push origin :fixes" if you're sufficiently oldschool and/or
+				hardcore.  You know who you are.
+			</aside>
 		</section>
 	</section>
 	<section>
