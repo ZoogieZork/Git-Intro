@@ -25,6 +25,6 @@
                 .on("tap", function(e){ Reveal.next(); });
         } );
 
-        head.js('https://raw.github.com/Remotes/Remotes/master/dist/remotes.ne.min.js');
+        head.js('https://hakim-static.s3.amazonaws.com/reveal-js/remotes.ne.min.js');
     }
 })(window);
