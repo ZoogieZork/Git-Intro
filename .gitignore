@@ -1,0 +1,9 @@
+.vim-template*
+*~
+*.bak
+*.sw?
+*.tmp
+=template.*
+Thumbs.db
+desktop.ini
+/.vimrc
